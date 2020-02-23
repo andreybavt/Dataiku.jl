@@ -15,7 +15,7 @@ function _get_flow_inputs_or_outputs(obj::DSSObject, option)
     if isempty(puts)
         throw(DkuException("$(_type_as_string(obj)) $(obj.name) cannot be used : declare it as " * option * "put of your recipe."))
     end
-    return get_flow()[option][0]
+    return get_flow()[option][1]
 end
 
 function get_flow_variable(name::AbstractString)
